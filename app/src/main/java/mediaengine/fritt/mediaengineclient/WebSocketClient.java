@@ -232,7 +232,6 @@ public class WebSocketClient implements ClientInterface, WebSocketChannelClient.
         try{
             Log.d(TAG,"onWebSocketMessage");
             JSONObject json = new JSONObject(msg);
-            String errorText = json.optString("error");
             if(msg.length() > 0){
                 String type = json.getString("mms");
                 if(!json.has("transaction"))
